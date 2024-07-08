@@ -1,13 +1,4 @@
-const productModel=require("../models/productModel")
+exports.getAllProducts=(req,res)=>{
+    res.status(200).json({message:"Route is working fine"})
 
-const insert=async(req,res)=>{
-    try {
-        console.log("everything is okk now !!");
-    } catch (error) {
-      console.error(massage.error)  
-    }
-}
-
-module.exports={
-    insert
 }
