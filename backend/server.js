@@ -1,13 +1,14 @@
-
 const app=require("./app");
-
-require("dotenv").config();
-
-const PORT=process.env.PORT || 8000
-
-
+const dontenv=require("dotenv");
+const connectDB= require("./config/database");
+//config
+dontenv.config({path:"./config/config.env"})
 
 
-app.listen(PORT,()=>{
-    console.log("server is running 8000 !! ")
+//connecting to database
+connectDB()
+
+app.listen( process.env.PORT,()=>{
+    console.log(`server on port ${ process.env.PORT}`)
 })
+
