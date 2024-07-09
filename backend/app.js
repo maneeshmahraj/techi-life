@@ -4,9 +4,7 @@ const bodyparser=require("body-parser");
 const cors=require("cors");
 const app=express();
 const router=require("./routers/route");
-require("dotenv").config();
-app.use(bodyparser.urlencoded({ extended: true }))
-app.use(bodyparser.json())
+
 const DATA_URL=process.env.URL;
 console.log(DATA_URL);
 app.use(cors());
